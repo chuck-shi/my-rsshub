@@ -1,8 +1,8 @@
 name: Sync Fork
 on:
   schedule:
-    - cron: '0 0 1 * *' # 每天凌晨自动同步一次
-  workflow_dispatch: # 支持手动点击运行
+    - cron: '0 0 1 * *' # 每月1号凌晨自动同步
+  workflow_dispatch: # 手动触发
 jobs:
   sync:
     runs-on: ubuntu-latest
@@ -12,6 +12,9 @@ jobs:
         uses: aormsby/Fork-Sync-With-Upstream-action@v3.4
         with:
           target_repo_token: ${{ secrets.GITHUB_TOKEN }}
-          upstream_repository: DIYgod/RSSHub
-          upstream_branch: master
-          target_branch: master
+          # 以下是根据报错修改后的参数名
+          upstream_sync_repo: DIYgod/RSSHub
+          upstream_sync_branch: master
+          target_sync_branch: master
+          # 如果你想测试，可以暂时加上下面这行跳过一些验证
+          test_mode: false
