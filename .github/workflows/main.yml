@@ -11,10 +11,10 @@ jobs:
       - name: Sync upstream
         uses: aormsby/Fork-Sync-With-Upstream-action@v3.4
         with:
-          target_repo_token: ${{ secrets.GITHUB_TOKEN }}
-          # 以下是根据报错修改后的参数名
+          target_repo_token: ${{ secrets.MY_SYNC_TOKEN }} 
+          # 上面这一行已改为使用你自己的私人 Token，以解决权限报错问题
+          
           upstream_sync_repo: DIYgod/RSSHub
           upstream_sync_branch: master
           target_sync_branch: master
-          # 如果你想测试，可以暂时加上下面这行跳过一些验证
           test_mode: false
