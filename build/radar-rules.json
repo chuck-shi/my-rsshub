@@ -16093,6 +16093,20 @@
       }
     ]
   },
+  "elamigos.site": {
+    "_name": "ElAmigos",
+    ".": [
+      {
+        "title": "Releases",
+        "docs": "https://docs.rsshub.app/routes/game",
+        "source": [
+          "/",
+          "/index.html"
+        ],
+        "target": "/elamigos/games"
+      }
+    ]
+  },
   "elasticsearch.cn": {
     "_name": "Elastic 中文社区",
     ".": [
@@ -41648,6 +41662,15 @@
           "/"
         ],
         "target": "/sina/finance/china"
+      },
+      {
+        "title": "财经－滚动新闻",
+        "docs": "https://docs.rsshub.app/routes/new-media",
+        "source": [
+          "/roll",
+          "/"
+        ],
+        "target": "/sina/finance/rollnews"
       },
       {
         "title": "美股",
